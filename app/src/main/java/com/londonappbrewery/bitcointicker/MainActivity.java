@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
                 Log.d("Bitcoin", "Item selected");
             }
-        }); 
+        });
 
     }
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 // called when response HTTP status is "200 OK"
                 Log.d("Bitcoin", "JSON: " + response.toString());
                 try {
-                    String city = response.getString("ask");
+                    String city = response.getString("last");
                     mPriceTextView.setText(city);
                 } catch (JSONException e) {
                     e.printStackTrace();
